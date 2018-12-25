@@ -3,10 +3,12 @@ body, dd, dl, fieldset, h1, h2, h3, h4, h5, h6, ol, p, textarea, ul {
     padding: 0;
 }
 
-body, button, input, select, textarea {
+body {
     width: 100vw;
     height: 100vh;
     font-family: Helvetica Neue,Helvetica,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+    background: url("/static/images/bg.jpg") no-repeat 50%;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,4 +47,10 @@ a, button, input, textarea {
 ::-webkit-scrollbar-thumb {
     border-radius: 3px;
     background-color: #c3c3c3;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
 }

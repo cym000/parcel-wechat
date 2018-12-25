@@ -28,7 +28,6 @@
 .user {
     padding: 18px;
     box-sizing: border-box;
-    border-bottom: 1px solid #24272c
 }
 
 .user .avatar {
@@ -83,14 +82,123 @@
 }
 
 .web_wechat_add {
-    background: url("../images/5af37c4a880a95586cd41c5b251d5562@1x.png") no-repeat;
+    background: url("/static/images/package.png") no-repeat;
     background-position: -434px -398px;
+    background-size: 487px 462px;
+}
+
+.search_bar {
+    position: relative;
+    width: 244px;
+    margin: 0 auto 6px;
+}
+
+.search_bar .web_wechat_search {
+    position: absolute;
+    z-index: 101;
+    top: 1px;
+}
+
+.web_wechat_search {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -60px -432px;
+    background-size: 487px 462px;
+}
+
+.web_wechat_screencut, .web_wechat_search {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+
+.search_bar .frm_search {
+    width: 214px;
+    height: 32px;
+    line-height: 32px;
+    border: 0;
+    border-radius: 2px;
+    background-color: #26292e;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+.tab {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.tab .tab_item {
+    float: left;
+    width: 33.33333333%;
+    position: relative;
+    cursor: pointer;
+}
+
+.tab .tab_item:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 0;
+    height: 20px;
+    border-right: 1px solid #24272c;
+}
+
+.tab .tab_item a {
+    display: block;
+    text-align: center;
+}
+
+.chat .web_wechat_tab_chat_hl {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -185px -96px;
+    background-size: 487px 462px;
+}
+
+.tab_item .chat i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+}
+
+.web_wechat_tab_chat {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -150px -96px;
+    background-size: 487px 462px;
+}
+
+.chat .web_wechat_tab_public_hl {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -304px -281px;
+    background-size: 487px 462px;
+}
+
+.web_wechat_tab_public {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -376px -322px;
+    -webkit-background-size: 487px 462px;
+    background-size: 487px 462px;
+}
+
+.chat .web_wechat_tab_friends_hl {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -304px -246px;
+    background-size: 487px 462px;
+}
+
+.web_wechat_tab_friends {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -220px -96px;
     background-size: 487px 462px;
 }
 
 .chat_list {
     margin: 0;
-    height: 671px;
+    height: 620px;
 }
 
 .scroll-wrapper {
@@ -146,7 +254,7 @@
 }
 
 .web_wechat_no-remind {
-    background: url("../images/5af37c4a880a95586cd41c5b251d5562@1x.png") no-repeat;
+    background: url("/static/images/package.png") no-repeat;
     background-position: -401px -357px;
     -webkit-background-size: 487px 462px;
     background-size: 487px 462px;
@@ -249,7 +357,7 @@
 .web_wechat_down_icon {
     width: 10px;
     height: 10px;
-    background: url("../images/5af37c4a880a95586cd41c5b251d5562@1x.png") no-repeat;
+    background: url("/static/images/package.png") no-repeat;
     background-position: -477px -65px;
     background-size: 487px 462px;
 }
@@ -298,7 +406,7 @@
 .web_wechat_nomes_icon {
     width: 100px;
     height: 90px;
-    background: url("../images/5af37c4a880a95586cd41c5b251d5562@1x.png") no-repeat;
+    background: url("/static/images/package.png") no-repeat;
     background-position: -96px -150px;
     background-size: 487px 462px;
 }
