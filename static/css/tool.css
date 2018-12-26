@@ -1,0 +1,95 @@
+.chat .box_ft {
+    height: 180px;
+    margin-right: 19px;
+    border-top: 1px solid #d6d6d6;
+}
+
+.box_ft {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.chat .box_ft .toolbar {
+    height: 30px;
+    padding: 5px 17px;
+}
+
+.web_wechat_face {
+    width: 30px;
+    height: 30px;
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -404px -398px;
+    background-size: 487px 462px;
+    cursor: pointer;
+}
+
+.web_wechat_screencut {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -30px -432px;
+    background-size: 487px 462px;
+    cursor: pointer;
+}
+
+.web_wechat_pic, .web_wechat_profile_loc {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.web_wechat_pic {
+    width: 30px;
+    height: 30px;
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -120px -432px;
+    background-size: 487px 462px;
+}
+
+.webuploader-container {
+    position: relative;
+}
+
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    overflow: hidden;
+}
+
+#upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    bottom: auto;
+    right: auto;
+}
+
+.webuploader-element-invisible {
+    position: absolute;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.upload-label {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+}
+
+.chat .box_ft .content .flex {
+    height: 6em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 20px;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+}

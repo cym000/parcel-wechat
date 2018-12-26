@@ -1,8 +1,6 @@
 #app {
     height: 80%;
     min-height: 600px;
-    padding-top: 100px;
-    transition: padding .3s linear;
     backface-visibility: hidden;
 }
 
@@ -363,22 +361,29 @@
 }
 
 .chat .box_bd {
-    width: 100%;
     bottom: 180px;
     padding: 0 19px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
+.box_bd {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .scroll-wrapper {
-    overflow: hidden!important;
-    padding: 0!important;
+    overflow: hidden !important;
+    padding: 0 !important;
     position: relative;
 }
 
 .scroll-wrapper>.scroll-content {
     border: none!important;
-    box-sizing: content-box!important;
+    box-sizing: border-box !important;
     height: auto;
     left: 0;
     margin: 0;
@@ -389,6 +394,10 @@
     position: relative!important;
     top: 0;
     width: auto!important;
+}
+
+.scroll-content {
+    padding: 0 19px !important;
 }
 
 .message_empty {
@@ -409,10 +418,6 @@
     background: url("/static/images/package.png") no-repeat;
     background-position: -96px -150px;
     background-size: 487px 462px;
-}
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
-    display: none !important;
 }
 
 .scrollbar-dynamic>.scroll-element.scroll-x {
