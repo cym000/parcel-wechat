@@ -438,15 +438,6 @@
     width: 100%;
 }
 
-.scrollbar-dynamic>.scroll-element, .scrollbar-dynamic>.scroll-element div {
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 10;
-}
-
 .scroll-element .scroll-arrow, .scroll-element .scroll-bar {
     cursor: default;
 }

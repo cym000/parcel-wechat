@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import map from 'lodash/map';
 import RightHead from './rightHead';
 import Empty from './empty';
 import Message from './message';
 import Tool from './tool';
-import map from 'lodash/map';
+import { ScrollX, ScrollY } from '../scroll';
 
 class Right extends Component {
 
@@ -26,46 +27,8 @@ class Right extends Component {
                                     map(messages, (message, index) => <Message message={message} key={index}/>)
                                 }
                             </div>
-                            <div className="scroll-element scroll-x">
-                                <div className="scroll-element_corner"/>
-                                <div className="scroll-arrow scroll-arrow_less"/>
-                                <div className="scroll-arrow scroll-arrow_more"/>
-                                <div className="scroll-element_outer">
-                                    <div className="scroll-element_size"/>
-                                    <div className="scroll-element_inner-wrapper">
-                                        <div className="scroll-element_inner scroll-element_track">
-                                            <div className="scroll-element_inner-bottom"/>
-                                        </div>
-                                    </div>
-                                    <div className="scroll-bar" style={{ width: 96}}>
-                                        <div className="scroll-bar_body">
-                                            <div className="scroll-bar_body-inner"/>
-                                        </div>
-                                        <div className="scroll-bar_bottom"/>
-                                        <div className="scroll-bar_center"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="scroll-element scroll-y">
-                                <div className="scroll-element_corner"/>
-                                <div className="scroll-arrow scroll-arrow_less"/>
-                                <div className="scroll-arrow scroll-arrow_more"/>
-                                <div className="scroll-element_outer">
-                                    <div className="scroll-element_size"/>
-                                    <div className="scroll-element_inner-wrapper">
-                                        <div className="scroll-element_inner scroll-element_track">
-                                            <div className="scroll-element_inner-bottom"/>
-                                        </div>
-                                    </div>
-                                    <div className="scroll-bar" style={{ height: 96}}>
-                                        <div className="scroll-bar_body">
-                                            <div className="scroll-bar_body-inner"/>
-                                        </div>
-                                        <div className="scroll-bar_bottom"/>
-                                        <div className="scroll-bar_center"/>
-                                    </div>
-                                </div>
-                            </div>
+                            {/*<ScrollX />*/}
+                            {/*<ScrollY />*/}
                         </div>
                     </div>
                     <Tool />
@@ -102,6 +65,12 @@ Right.defaultProps = {
         receiver: 1,
         msgType: 1,
         content: "测试"
+    }, {
+        avatar: require("../../../static/images/contact.jpg"),
+        name: "陈雄韬",
+        receiver: 1,
+        msgType: 1,
+        content: "@所有人<br>狼杀报名表<br>时间：本周六 19：30 <br>地点：瑞景 乐萃咖啡<br>天气：降温注意保暖<br>板子：根据人数决定               <br>不到9人自动流局<br>法官：xx<br>1、平叔<br>2、22<br>3、Nash<br>4、<br>5、<br>6、6666<br>7、6667<br>8、海上霸主<br>9、Lin<br>10、lin+1<br>11、ling<br>12、鱼<br>13、<br><br>待定区<br>1、方志<br>2、凉白开<br>3、乌龟"
     }]
 };
 

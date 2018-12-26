@@ -28,7 +28,7 @@ class Message extends Component {
                                     <div className={`bubble js_message_bubble ng-scope ${message.receiver === 1 ? "bubble_default left" : "bubble_primary right"}`}>
                                         <div className="bubble_cont ng-scope">
                                             <div className="plain">
-                                                <pre className="js_message_plain ng-binding">{message.content}</pre>
+                                                <pre className="js_message_plain ng-binding" dangerouslySetInnerHTML={{ __html: message.content}}/>
                                             </div>
                                         </div>
                                     </div>

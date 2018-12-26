@@ -132,3 +132,23 @@
     height: 0;
     clear: both;
 }
+
+.scrollbar-dynamic>.scroll-element.scroll-y {
+    height: 100%;
+    min-height: 100%;
+    right: 2px;
+    top: 0;
+    width: 7px;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+    visibility: hidden;
+}
+
+.scrollbar-dynamic>.scroll-element.scroll-y .scroll-element_outer {
+    left: auto;
+    right: 0;
+    top: 2px;
+    transition: width .2s;
+}
