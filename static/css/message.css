@@ -116,3 +116,19 @@
     border-left-color: #b2e281;
     border-left-width: 4px;
 }
+
+.bubble.right:after, .bubble.right:before {
+    left: 100%;
+}
+
+.bubble.right:after {
+    border-left-color: #fff;
+}
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}

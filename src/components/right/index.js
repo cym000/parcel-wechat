@@ -12,7 +12,7 @@ class Right extends Component {
         const { messages } = this.props;
 
         return (
-            <div className="right">
+            <div className="rightArea">
                 <div id="chatArea" className="box chat ng-scope no-choose">
                     <RightHead />
                     <div className="scroll-wrapper box_bd chat_bd scrollbar-dynamic" style={{ position: "absolute"}}>
@@ -96,6 +96,12 @@ Right.defaultProps = {
         receiver: 0,
         msgType: 1,
         content: "要一阵子不能玩了"
+    }, {
+        avatar: require("../../../static/images/contact.jpg"),
+        name: "陈雄韬",
+        receiver: 1,
+        msgType: 1,
+        content: "测试"
     }]
 };
 

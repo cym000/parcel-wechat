@@ -20,7 +20,7 @@ class Message extends Component {
                             <img className="avatar" src={message.avatar} title={message.name}/>
                             <div className="content">
                                 {
-                                    message.receiver === 1 &&
+                                    message.receiver === 1 && false &&
                                     <h4 className="nickname ng-binding ng-scope">{message.name}</h4>
                                 }
                                 {

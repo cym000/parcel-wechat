@@ -1,0 +1,1138 @@
+import React from "react";
+
+const qqFace = [{
+    name: "微笑",
+    type: "qq",
+    key: "qqface0"
+}, {
+    name: "撇嘴",
+    type: "qq",
+    key: "qqface1"
+}, {
+    name: "色",
+    type: "qq",
+    key: "qqface2"
+}, {
+    name: "发呆",
+    type: "qq",
+    key: "qqface3"
+}, {
+    name: "得意",
+    type: "qq",
+    key: "qqface4"
+}, {
+    name: "流泪",
+    type: "qq",
+    key: "qqface5"
+}, {
+    name: "害羞",
+    type: "qq",
+    key: "qqface6"
+}, {
+    name: "闭嘴",
+    type: "qq",
+    key: "qqface7"
+}, {
+    name: "睡",
+    type: "qq",
+    key: "qqface8"
+}, {
+    name: "大哭",
+    type: "qq",
+    key: "qqface9"
+}, {
+    name: "尴尬",
+    type: "qq",
+    key: "qqface10"
+}, {
+    name: "发怒",
+    type: "qq",
+    key: "qqface11"
+}, {
+    name: "调皮",
+    type: "qq",
+    key: "qqface12"
+}, {
+    name: "呲牙",
+    type: "qq",
+    key: "qqface13"
+}, {
+    name: "惊讶",
+    type: "qq",
+    key: "qqface14"
+}, {
+    name: "难过",
+    type: "qq",
+    key: "qqface15"
+}, {
+    name: "酷",
+    type: "qq",
+    key: "qqface16"
+}, {
+    name: "冷汗",
+    type: "qq",
+    key: "qqface17"
+}, {
+    name: "抓狂",
+    type: "qq",
+    key: "qqface18"
+}, {
+    name: "吐",
+    type: "qq",
+    key: "qqface19"
+}, {
+    name: "偷笑",
+    type: "qq",
+    key: "qqface20"
+}, {
+    name: "愉快",
+    type: "qq",
+    key: "qqface21"
+}, {
+    name: "白眼",
+    type: "qq",
+    key: "qqface22"
+}, {
+    name: "傲慢",
+    type: "qq",
+    key: "qqface23"
+}, {
+    name: "饥饿",
+    type: "qq",
+    key: "qqface24"
+}, {
+    name: "困",
+    type: "qq",
+    key: "qqface25"
+}, {
+    name: "惊恐",
+    type: "qq",
+    key: "qqface26"
+}, {
+    name: "流汗",
+    type: "qq",
+    key: "qqface27"
+}, {
+    name: "憨笑",
+    type: "qq",
+    key: "qqface28"
+}, {
+    name: "悠闲",
+    type: "qq",
+    key: "qqface29"
+}, {
+    name: "奋斗",
+    type: "qq",
+    key: "qqface30"
+}, {
+    name: "咒骂",
+    type: "qq",
+    key: "qqface31"
+}, {
+    name: "疑问",
+    type: "qq",
+    key: "qqface32"
+}, {
+    name: "嘘",
+    type: "qq",
+    key: "qqface33"
+}, {
+    name: "晕",
+    type: "qq",
+    key: "qqface34"
+}, {
+    name: "疯了",
+    type: "qq",
+    key: "qqface35"
+}, {
+    name: "衰",
+    type: "qq",
+    key: "qqface36"
+}, {
+    name: "骷髅",
+    type: "qq",
+    key: "qqface37"
+}, {
+    name: "敲打",
+    type: "qq",
+    key: "qqface38"
+}, {
+    name: "再见",
+    type: "qq",
+    key: "qqface39"
+}, {
+    name: "擦汗",
+    type: "qq",
+    key: "qqface40"
+}, {
+    name: "抠鼻",
+    type: "qq",
+    key: "qqface41"
+}, {
+    name: "鼓掌",
+    type: "qq",
+    key: "qqface42"
+}, {
+    name: "糗大了",
+    type: "qq",
+    key: "qqface43"
+}, {
+    name: "坏笑",
+    type: "qq",
+    key: "qqface44"
+}, {
+    name: "左哼哼",
+    type: "qq",
+    key: "qqface45"
+}, {
+    name: "右哼哼",
+    type: "qq",
+    key: "qqface46"
+}, {
+    name: "哈欠",
+    type: "qq",
+    key: "qqface47"
+}, {
+    name: "鄙视",
+    type: "qq",
+    key: "qqface48"
+}, {
+    name: "委屈",
+    type: "qq",
+    key: "qqface49"
+}, {
+    name: "快哭了",
+    type: "qq",
+    key: "qqface50"
+}, {
+    name: "阴险",
+    type: "qq",
+    key: "qqface51"
+}, {
+    name: "亲亲",
+    type: "qq",
+    key: "qqface52"
+}, {
+    name: "吓",
+    type: "qq",
+    key: "qqface53"
+}, {
+    name: "可怜",
+    type: "qq",
+    key: "qqface54"
+}, {
+    name: "菜刀",
+    type: "qq",
+    key: "qqface55"
+}, {
+    name: "西瓜",
+    type: "qq",
+    key: "qqface56"
+}, {
+    name: "啤酒",
+    type: "qq",
+    key: "qqface57"
+}, {
+    name: "篮球",
+    type: "qq",
+    key: "qqface58"
+}, {
+    name: "乒乓",
+    type: "qq",
+    key: "qqface59"
+}, {
+    name: "咖啡",
+    type: "qq",
+    key: "qqface60"
+}, {
+    name: "饭",
+    type: "qq",
+    key: "qqface61"
+}, {
+    name: "猪头",
+    type: "qq",
+    key: "qqface62"
+}, {
+    name: "玫瑰",
+    type: "qq",
+    key: "qqface63"
+}, {
+    name: "凋谢",
+    type: "qq",
+    key: "qqface64"
+}, {
+    name: "嘴唇",
+    type: "qq",
+    key: "qqface65"
+}, {
+    name: "爱心",
+    type: "qq",
+    key: "qqface66"
+}, {
+    name: "心碎",
+    type: "qq",
+    key: "qqface67"
+}, {
+    name: "蛋糕",
+    type: "qq",
+    key: "qqface68"
+}, {
+    name: "闪电",
+    type: "qq",
+    key: "qqface69"
+}, {
+    name: "炸弹",
+    type: "qq",
+    key: "qqface70"
+}, {
+    name: "刀",
+    type: "qq",
+    key: "qqface71"
+}, {
+    name: "足球",
+    type: "qq",
+    key: "qqface72"
+}, {
+    name: "瓢虫",
+    type: "qq",
+    key: "qqface73"
+}, {
+    name: "便便",
+    type: "qq",
+    key: "qqface74"
+}, {
+    name: "月亮",
+    type: "qq",
+    key: "qqface75"
+}, {
+    name: "太阳",
+    type: "qq",
+    key: "qqface76"
+}, {
+    name: "礼物",
+    type: "qq",
+    key: "qqface77"
+}, {
+    name: "拥抱",
+    type: "qq",
+    key: "qqface78"
+}, {
+    name: "强",
+    type: "qq",
+    key: "qqface79"
+}, {
+    name: "弱",
+    type: "qq",
+    key: "qqface80"
+}, {
+    name: "握手",
+    type: "qq",
+    key: "qqface81"
+}, {
+    name: "胜利",
+    type: "qq",
+    key: "qqface82"
+}, {
+    name: "抱拳",
+    type: "qq",
+    key: "qqface83"
+}, {
+    name: "勾引",
+    type: "qq",
+    key: "qqface84"
+}, {
+    name: "拳头",
+    type: "qq",
+    key: "qqface85"
+}, {
+    name: "差劲",
+    type: "qq",
+    key: "qqface86"
+}, {
+    name: "爱你",
+    type: "qq",
+    key: "qqface87"
+}, {
+    name: "NO",
+    type: "qq",
+    key: "qqface88"
+}, {
+    name: "OK",
+    type: "qq",
+    key: "qqface89"
+}, {
+    name: "爱情",
+    type: "qq",
+    key: "qqface90"
+}, {
+    name: "飞吻",
+    type: "qq",
+    key: "qqface91"
+}, {
+    name: "跳跳",
+    type: "qq",
+    key: "qqface92"
+}, {
+    name: "发抖",
+    type: "qq",
+    key: "qqface93"
+}, {
+    name: "怄火",
+    type: "qq",
+    key: "qqface94"
+}, {
+    name: "转圈",
+    type: "qq",
+    key: "qqface95"
+}, {
+    name: "磕头",
+    type: "qq",
+    key: "qqface96"
+}, {
+    name: "回头",
+    type: "qq",
+    key: "qqface97"
+}, {
+    name: "跳绳",
+    type: "qq",
+    key: "qqface98"
+}, {
+    name: "投降",
+    type: "qq",
+    key: "qqface99"
+}, {
+    name: "激动",
+    type: "qq",
+    key: "qqface100"
+}, {
+    name: "乱舞",
+    type: "qq",
+    key: "qqface101"
+}, {
+    name: "献吻",
+    type: "qq",
+    key: "qqface102"
+}, {
+    name: "左太极",
+    type: "qq",
+    key: "qqface103"
+}, {
+    name: "右太极",
+    type: "qq",
+    key: "qqface104"
+}];
+
+const emojiFace = [{
+    name: "笑脸",
+    type: "emoji",
+    key: "emoji0"
+}, {
+    name: "生病",
+    type: "emoji",
+    key: "emoji1"
+}, {
+    name: "破涕为笑",
+    type: "emoji",
+    key: "emoji2"
+}, {
+    name: "吐舌",
+    type: "emoji",
+    key: "emoji3"
+}, {
+    name: "脸红",
+    type: "emoji",
+    key: "emoji4"
+}, {
+    name: "恐惧",
+    type: "emoji",
+    key: "emoji5"
+}, {
+    name: "失望",
+    type: "emoji",
+    key: "emoji6"
+}, {
+    name: "无语",
+    type: "emoji",
+    key: "emoji7"
+}, {
+    name: "嘿哈",
+    type: "qq",
+    key: "emoji8"
+}, {
+    name: "捂脸",
+    type: "qq",
+    key: "emoji9"
+}, {
+    name: "奸笑",
+    type: "qq",
+    key: "emoji10"
+}, {
+    name: "机智",
+    type: "qq",
+    key: "emoji11"
+}, {
+    name: "皱眉",
+    type: "qq",
+    key: "emoji12"
+}, {
+    name: "耶",
+    type: "qq",
+    key: "emoji13"
+}, {
+    name: "鬼魂",
+    type: "emoji",
+    key: "emoji14"
+}, {
+    name: "合十",
+    type: "emoji",
+    key: "emoji15"
+}, {
+    name: "强壮",
+    type: "emoji",
+    key: "emoji16"
+}, {
+    name: "庆祝",
+    type: "emoji",
+    key: "emoji17"
+}, {
+    name: "礼物",
+    type: "emoji",
+    key: "emoji18"
+}, {
+    name: "红包",
+    type: "qq",
+    key: "emoji19"
+}, {
+    name: "鸡",
+    type: "qq",
+    key: "emoji20"
+}, {
+    name: "开心",
+    type: "emoji",
+    key: "emoji21"
+}, {
+    name: "大笑",
+    type: "emoji",
+    key: "emoji22"
+}, {
+    name: "热情",
+    type: "emoji",
+    key: "emoji23"
+}, {
+    name: "眨眼",
+    type: "emoji",
+    key: "emoji24"
+}, {
+    name: "色",
+    type: "emoji",
+    key: "emoji25"
+}, {
+    name: "接吻",
+    type: "emoji",
+    key: "emoji26"
+}, {
+    name: "亲吻",
+    type: "emoji",
+    key: "emoji27"
+}, {
+    name: "露齿笑",
+    type: "emoji",
+    key: "emoji28"
+}, {
+    name: "满意",
+    type: "emoji",
+    key: "emoji29"
+}, {
+    name: "戏弄",
+    type: "emoji",
+    key: "emoji30"
+}, {
+    name: "得意",
+    type: "emoji",
+    key: "emoji31"
+}, {
+    name: "汗",
+    type: "emoji",
+    key: "emoji32"
+}, {
+    name: "低落",
+    type: "emoji",
+    key: "emoji33"
+}, {
+    name: "呸",
+    type: "emoji",
+    key: "emoji34"
+}, {
+    name: "焦虑",
+    type: "emoji",
+    key: "emoji35"
+}, {
+    name: "担心",
+    type: "emoji",
+    key: "emoji36"
+}, {
+    name: "震惊",
+    type: "emoji",
+    key: "emoji37"
+}, {
+    name: "悔恨",
+    type: "emoji",
+    key: "emoji38"
+}, {
+    name: "眼泪",
+    type: "emoji",
+    key: "emoji39"
+}, {
+    name: "哭",
+    type: "emoji",
+    key: "emoji40"
+}, {
+    name: "晕",
+    type: "emoji",
+    key: "emoji41"
+}, {
+    name: "心烦",
+    type: "emoji",
+    key: "emoji42"
+}, {
+    name: "生气",
+    type: "emoji",
+    key: "emoji43"
+}, {
+    name: "睡觉",
+    type: "emoji",
+    key: "emoji44"
+}, {
+    name: "恶魔",
+    type: "emoji",
+    key: "emoji45"
+}, {
+    name: "外星人",
+    type: "emoji",
+    key: "emoji46"
+}, {
+    name: "心",
+    type: "emoji",
+    key: "emoji47"
+}, {
+    name: "心碎",
+    type: "emoji",
+    key: "emoji48"
+}, {
+    name: "丘比特",
+    type: "emoji",
+    key: "emoji49"
+}, {
+    name: "闪烁",
+    type: "emoji",
+    key: "emoji50"
+}, {
+    name: "星星",
+    type: "emoji",
+    key: "emoji51"
+}, {
+    name: "叹号",
+    type: "emoji",
+    key: "emoji52"
+}, {
+    name: "问号",
+    type: "emoji",
+    key: "emoji53"
+}, {
+    name: "睡着",
+    type: "emoji",
+    key: "emoji54"
+}, {
+    name: "水滴",
+    type: "emoji",
+    key: "emoji55"
+}, {
+    name: "音乐",
+    type: "emoji",
+    key: "emoji56"
+}, {
+    name: "火",
+    type: "emoji",
+    key: "emoji57"
+}, {
+    name: "便便",
+    type: "emoji",
+    key: "emoji58"
+}, {
+    name: "强",
+    type: "emoji",
+    key: "emoji59"
+}, {
+    name: "弱",
+    type: "emoji",
+    key: "emoji60"
+}, {
+    name: "拳头",
+    type: "emoji",
+    key: "emoji61"
+}, {
+    name: "胜利",
+    type: "emoji",
+    key: "emoji62"
+}, {
+    name: "上",
+    type: "emoji",
+    key: "emoji63"
+}, {
+    name: "下",
+    type: "emoji",
+    key: "emoji64"
+}, {
+    name: "右",
+    type: "emoji",
+    key: "emoji65"
+}, {
+    name: "左",
+    type: "emoji",
+    key: "emoji66"
+}, {
+    name: "第一",
+    type: "emoji",
+    key: "emoji67"
+}, {
+    name: "吻",
+    type: "emoji",
+    key: "emoji68"
+}, {
+    name: "热恋",
+    type: "emoji",
+    key: "emoji69"
+}, {
+    name: "男孩",
+    type: "emoji",
+    key: "emoji70"
+}, {
+    name: "女孩",
+    type: "emoji",
+    key: "emoji71"
+}, {
+    name: "女士",
+    type: "emoji",
+    key: "emoji72"
+}, {
+    name: "男士",
+    type: "emoji",
+    key: "emoji73"
+}, {
+    name: "天使",
+    type: "emoji",
+    key: "emoji74"
+}, {
+    name: "骷髅",
+    type: "emoji",
+    key: "emoji75"
+}, {
+    name: "红唇",
+    type: "emoji",
+    key: "emoji76"
+}, {
+    name: "太阳",
+    type: "emoji",
+    key: "emoji77"
+}, {
+    name: "下雨",
+    type: "emoji",
+    key: "emoji78"
+}, {
+    name: "多云",
+    type: "emoji",
+    key: "emoji79"
+}, {
+    name: "雪人",
+    type: "emoji",
+    key: "emoji80"
+}, {
+    name: "月亮",
+    type: "emoji",
+    key: "emoji81"
+}, {
+    name: "闪电",
+    type: "emoji",
+    key: "emoji82"
+}, {
+    name: "海浪",
+    type: "emoji",
+    key: "emoji83"
+}, {
+    name: "猫",
+    type: "emoji",
+    key: "emoji84"
+}, {
+    name: "小狗",
+    type: "emoji",
+    key: "emoji85"
+}, {
+    name: "老鼠",
+    type: "emoji",
+    key: "emoji86"
+}, {
+    name: "仓鼠",
+    type: "emoji",
+    key: "emoji87"
+}, {
+    name: "兔子",
+    type: "emoji",
+    key: "emoji88"
+}, {
+    name: "狗",
+    type: "emoji",
+    key: "emoji89"
+}, {
+    name: "青蛙",
+    type: "emoji",
+    key: "emoji90"
+}, {
+    name: "老虎",
+    type: "emoji",
+    key: "emoji91"
+}, {
+    name: "考拉",
+    type: "emoji",
+    key: "emoji92"
+}, {
+    name: "熊",
+    type: "emoji",
+    key: "emoji93"
+}, {
+    name: "猪",
+    type: "emoji",
+    key: "emoji94"
+}, {
+    name: "牛",
+    type: "emoji",
+    key: "emoji95"
+}, {
+    name: "野猪",
+    type: "emoji",
+    key: "emoji96"
+}, {
+    name: "猴子",
+    type: "emoji",
+    key: "emoji97"
+}, {
+    name: "马",
+    type: "emoji",
+    key: "emoji98"
+}, {
+    name: "蛇",
+    type: "emoji",
+    key: "emoji99"
+}, {
+    name: "鸽子",
+    type: "emoji",
+    key: "emoji100"
+}, {
+    name: "鸡",
+    type: "emoji",
+    key: "emoji101"
+}, {
+    name: "企鹅",
+    type: "emoji",
+    key: "emoji102"
+}, {
+    name: "毛虫",
+    type: "emoji",
+    key: "emoji103"
+}, {
+    name: "章鱼",
+    type: "emoji",
+    key: "emoji104"
+}, {
+    name: "鱼",
+    type: "emoji",
+    key: "emoji105"
+}, {
+    name: "鲸鱼",
+    type: "emoji",
+    key: "emoji106"
+}, {
+    name: "海豚",
+    type: "emoji",
+    key: "emoji107"
+}, {
+    name: "玫瑰",
+    type: "emoji",
+    key: "emoji108"
+}, {
+    name: "花",
+    type: "emoji",
+    key: "emoji109"
+}, {
+    name: "棕榈树",
+    type: "emoji",
+    key: "emoji110"
+}, {
+    name: "仙人掌",
+    type: "emoji",
+    key: "emoji111"
+}, {
+    name: "礼盒",
+    type: "emoji",
+    key: "emoji112"
+}, {
+    name: "南瓜灯",
+    type: "emoji",
+    key: "emoji113"
+}, {
+    name: "圣诞老人",
+    type: "emoji",
+    key: "emoji114"
+}, {
+    name: "圣诞树",
+    type: "emoji",
+    key: "emoji115"
+}, {
+    name: "铃",
+    type: "emoji",
+    key: "emoji116"
+}, {
+    name: "气球",
+    type: "emoji",
+    key: "emoji117"
+}, {
+    name: "CD",
+    type: "emoji",
+    key: "emoji118"
+}, {
+    name: "相机",
+    type: "emoji",
+    key: "emoji119"
+}, {
+    name: "录像机",
+    type: "emoji",
+    key: "emoji120"
+}, {
+    name: "电脑",
+    type: "emoji",
+    key: "emoji121"
+}, {
+    name: "电视",
+    type: "emoji",
+    key: "emoji122"
+}, {
+    name: "电话",
+    type: "emoji",
+    key: "emoji123"
+}, {
+    name: "解锁",
+    type: "emoji",
+    key: "emoji124"
+}, {
+    name: "锁",
+    type: "emoji",
+    key: "emoji125"
+}, {
+    name: "钥匙",
+    type: "emoji",
+    key: "emoji126"
+}, {
+    name: "成交",
+    type: "emoji",
+    key: "emoji127"
+}, {
+    name: "灯泡",
+    type: "emoji",
+    key: "emoji128"
+}, {
+    name: "邮箱",
+    type: "emoji",
+    key: "emoji129"
+}, {
+    name: "浴缸",
+    type: "emoji",
+    key: "emoji130"
+}, {
+    name: "钱",
+    type: "emoji",
+    key: "emoji131"
+}, {
+    name: "炸弹",
+    type: "emoji",
+    key: "emoji132"
+}, {
+    name: "手枪",
+    type: "emoji",
+    key: "emoji133"
+}, {
+    name: "药丸",
+    type: "emoji",
+    key: "emoji134"
+}, {
+    name: "橄榄球",
+    type: "emoji",
+    key: "emoji135"
+}, {
+    name: "篮球",
+    type: "emoji",
+    key: "emoji136"
+}, {
+    name: "足球",
+    type: "emoji",
+    key: "emoji137"
+}, {
+    name: "棒球",
+    type: "emoji",
+    key: "emoji138"
+}, {
+    name: "高尔夫",
+    type: "emoji",
+    key: "emoji139"
+}, {
+    name: "奖杯",
+    type: "emoji",
+    key: "emoji140"
+}, {
+    name: "入侵者",
+    type: "emoji",
+    key: "emoji141"
+}, {
+    name: "唱歌",
+    type: "emoji",
+    key: "emoji142"
+}, {
+    name: "吉他",
+    type: "emoji",
+    key: "emoji143"
+}, {
+    name: "比基尼",
+    type: "emoji",
+    key: "emoji144"
+}, {
+    name: "皇冠",
+    type: "emoji",
+    key: "emoji145"
+}, {
+    name: "雨伞",
+    type: "emoji",
+    key: "emoji146"
+}, {
+    name: "手提包",
+    type: "emoji",
+    key: "emoji147"
+}, {
+    name: "口红",
+    type: "emoji",
+    key: "emoji148"
+}, {
+    name: "戒指",
+    type: "emoji",
+    key: "emoji149"
+}, {
+    name: "钻石",
+    type: "emoji",
+    key: "emoji150"
+}, {
+    name: "咖啡",
+    type: "emoji",
+    key: "emoji151"
+}, {
+    name: "啤酒",
+    type: "emoji",
+    key: "emoji152"
+}, {
+    name: "干杯",
+    type: "emoji",
+    key: "emoji153"
+}, {
+    name: "鸡尾酒",
+    type: "emoji",
+    key: "emoji154"
+}, {
+    name: "汉堡",
+    type: "emoji",
+    key: "emoji155"
+}, {
+    name: "薯条",
+    type: "emoji",
+    key: "emoji156"
+}, {
+    name: "意面",
+    type: "emoji",
+    key: "emoji157"
+}, {
+    name: "寿司",
+    type: "emoji",
+    key: "emoji158"
+}, {
+    name: "面条",
+    type: "emoji",
+    key: "emoji159"
+}, {
+    name: "煎蛋",
+    type: "emoji",
+    key: "emoji160"
+}, {
+    name: "冰激凌",
+    type: "emoji",
+    key: "emoji161"
+}, {
+    name: "蛋糕",
+    type: "emoji",
+    key: "emoji162"
+}, {
+    name: "苹果",
+    type: "emoji",
+    key: "emoji163"
+}, {
+    name: "飞机",
+    type: "emoji",
+    key: "emoji164"
+}, {
+    name: "火箭",
+    type: "emoji",
+    key: "emoji165"
+}, {
+    name: "自行车",
+    type: "emoji",
+    key: "emoji166"
+}, {
+    name: "高铁",
+    type: "emoji",
+    key: "emoji167"
+}, {
+    name: "警告",
+    type: "emoji",
+    key: "emoji168"
+}, {
+    name: "旗",
+    type: "emoji",
+    key: "emoji169"
+}, {
+    name: "男人",
+    type: "emoji",
+    key: "emoji170"
+}, {
+    name: "女人",
+    type: "emoji",
+    key: "emoji171"
+}, {
+    name: "O",
+    type: "emoji",
+    key: "emoji172"
+}, {
+    name: "X",
+    type: "emoji",
+    key: "emoji173"
+}, {
+    name: "版权",
+    type: "emoji",
+    key: "emoji174"
+}, {
+    name: "注册商标",
+    type: "emoji",
+    key: "emoji175"
+}, {
+    name: "商标",
+    type: "emoji",
+    key: "emoji176"
+}];
+
+export {
+    qqFace,
+    emojiFace
+};

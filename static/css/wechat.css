@@ -381,22 +381,7 @@
     position: relative;
 }
 
-.scroll-wrapper>.scroll-content {
-    border: none!important;
-    box-sizing: border-box !important;
-    height: auto;
-    left: 0;
-    margin: 0;
-    max-height: none!important;
-    max-width: none!important;
-    overflow: scroll!important;
-    padding: 0;
-    position: relative!important;
-    top: 0;
-    width: auto!important;
-}
-
-.scroll-content {
+.chat>.scroll-wrapper>.scroll-content {
     padding: 0 19px !important;
 }
 
@@ -501,7 +486,7 @@
     border-radius: 7px;
 }
 
-.right {
+.rightArea {
     position: absolute;
     left: 0;
     top: 0;

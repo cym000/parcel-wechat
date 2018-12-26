@@ -23,7 +23,7 @@ class Left extends Component {
 
         return (
             <div className="panel give_me">
-                <div className="left">
+                <div className="leftArea">
                     <div className="user">
                         <div className="avatar">
                             <img className="img" src={user.avatar} alt=""/>
