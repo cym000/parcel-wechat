@@ -27,8 +27,8 @@ class Right extends Component {
                                     map(messages, (message, index) => <Message message={message} key={index}/>)
                                 }
                             </div>
-                            {/*<ScrollX />*/}
-                            {/*<ScrollY />*/}
+                            <ScrollX />
+                            <ScrollY />
                         </div>
                     </div>
                     <Tool />
