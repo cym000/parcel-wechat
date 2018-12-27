@@ -413,6 +413,11 @@
     width: 100%;
 }
 
+.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+    visibility: hidden;
+}
+
 .scrollbar-dynamic>.scroll-element, .scrollbar-dynamic>.scroll-element div {
     background: none;
     border: none;
@@ -455,7 +460,18 @@
 }
 
 .scrollbar-dynamic>.scroll-element.scroll-x .scroll-element_size {
+    top: -4px;
+}
+
+.scrollbar-dynamic>.scroll-element.scroll-y .scroll-element_size {
     left: -4px;
+}
+
+.scrollbar-dynamic>.scroll-element.scroll-y .scroll-bar {
+    left: auto;
+    min-height: 24px;
+    right: 0;
+    width: 7px;
 }
 
 .scrollbar-dynamic>.scroll-element .scroll-element_size {

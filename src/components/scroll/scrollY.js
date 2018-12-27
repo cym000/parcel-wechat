@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-    <div className="scroll-element scroll-y">
+    <div className="scroll-element scroll-y scroll-scrolly_visible">
         <div className="scroll-element_corner"/>
         <div className="scroll-arrow scroll-arrow_less"/>
         <div className="scroll-arrow scroll-arrow_more"/>

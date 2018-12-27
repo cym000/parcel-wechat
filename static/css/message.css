@@ -141,11 +141,6 @@
     width: 7px;
 }
 
-.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible {
-    display: block;
-    visibility: hidden;
-}
-
 .scrollbar-dynamic>.scroll-element.scroll-y .scroll-element_outer {
     left: auto;
     right: 0;

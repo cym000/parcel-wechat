@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { qqFace, emojiFace } from '../../util';
 import map from 'lodash/map';
+import space from '../../../static/images/spacer.gif';
 
 class Face extends Component {
 
@@ -29,6 +30,16 @@ class Face extends Component {
         }
     }
 
+    onFace = (face) => {
+        const { callback } = this.props;
+        const { key, name } = face;
+        if (callback) {
+            let number = key.substr(6);
+            let content = `<img class="qqemoji qqemoji${number}" data-text="[${name}]_web" src="${space}"/>`;
+            callback(content);
+        }
+    }
+
     componentWillUnmount() {
         document.onclick = null;
     }
@@ -54,7 +65,7 @@ class Face extends Component {
                                 <div className={selectedKey}>
                                     {
                                         selectedKey === "qq_face" &&
-                                        map(qqFace, face =>  <a key={face.key} title={face.name} type={face.type} className={`face ${face.key}`}>{face.name}</a>)
+                                        map(qqFace, face =>  <a key={face.key} title={face.name} type={face.type} className={`face ${face.key}`} onClick={() => this.onFace(face)}>{face.name}</a>)
                                     }
                                     {
                                         selectedKey === "emoji_face" &&

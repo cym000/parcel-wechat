@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import map from 'lodash/map';
 import Tab from './tab';
 import Friend from './friend';
+import { ScrollX, ScrollY } from '../scroll';
 
 class Left extends Component {
 
@@ -42,10 +43,14 @@ class Left extends Component {
                     <Tab selectedKey={selectedKey} onChange={this.onChange}/>
                     {
                         selectedKey === "chat" &&
-                        <div className="chat_list scrollbar-dynamic scroll-content scroll-scrolly_visible">
-                            {
-                                map(friends, (friend, index) => <Friend friend={friend} key={index}/>)
-                            }
+                        <div className="chat_list scrollbar-dynamic scroll-content scroll-scrolly_visible" style={{ position: "relative" }}>
+                            <div className="ng-scope">
+                                {
+                                    map(friends, (friend, index) => <Friend friend={friend} key={index}/>)
+                                }
+                            </div>
+                            <ScrollX />
+                            <ScrollY />
                         </div>
                     }
                 </div>
