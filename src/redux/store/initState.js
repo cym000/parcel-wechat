@@ -1,3 +1,4 @@
 export default {
-    collapsed: false
+    collapsed: false,
+    sessionFriend: {},  // 会话好友
 };
