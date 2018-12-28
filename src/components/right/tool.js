@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Face from '../face';
+import { connect } from 'react-redux';
 
 class Tool extends Component {
 
@@ -9,6 +10,22 @@ class Tool extends Component {
             show: false,
             focusIndex: 0
         };
+    }
+
+    componentWillMount () {
+        this.timer = setInterval(() => {
+            const { socketObj } = this.props;
+            if (socketObj) {
+                socketObj.on("test", (data) => {
+                    console.log(data);
+                }, "who");
+                clearInterval(this.timer);
+            }
+        }, 500);
+    }
+
+    componentUnmount() {
+        clearInterval(this.timer);
     }
 
     onShow = () => {
@@ -102,6 +119,11 @@ class Tool extends Component {
     //     return { 'start': start, 'end': end, 'item': [start, end] };
     // }
 
+    onSend = () => {
+        const { socketObj } = this.props;
+        socketObj.emit("test", { name: "blank" }, "who");
+    }
+
     render() {
 
         const { show } = this.state;
@@ -128,11 +150,11 @@ class Tool extends Component {
                 </div>
                 <div className="action">
                     <span className="desc ng-scope">按下Ctrl+Enter换行</span>
-                    <a className="btn btn_send">发送</a>
+                    <a className="btn btn_send" onClick={this.onSend}>发送</a>
                 </div>
             </div>
         )
     }
 }
 
-export default Tool;
+export default connect(({ socketObj }) => ({ socketObj }))(Tool);
