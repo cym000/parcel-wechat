@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import isEmpty from 'lodash/isEmpty';
 
 class RightHead extends Component {
     render() {
@@ -22,11 +21,5 @@ class RightHead extends Component {
         )
     }
 }
-
-RightHead.defaultProps = {
-    friend: {
-        // name: "崔玲"
-    }
-};
 
 export default RightHead;

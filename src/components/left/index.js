@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import map from 'lodash/map';
 import Tab from './tab';
 import Friend from './friend';
@@ -9,7 +10,8 @@ class Left extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedKey: "chat"
+            selectedKey: "chat",
+            userName: "@123"
         };
     }
 
@@ -20,7 +22,7 @@ class Left extends Component {
     render() {
 
         const { user, friends } = this.props;
-        const { selectedKey } = this.state;
+        const { selectedKey, userName } = this.state;
 
         return (
             <div className="panel give_me">
@@ -46,7 +48,7 @@ class Left extends Component {
                         <div className="chat_list scrollbar-dynamic scroll-content scroll-scrolly_visible" style={{ position: "relative" }}>
                             <div className="ng-scope">
                                 {
-                                    map(friends, (friend, index) => <Friend friend={friend} key={index}/>)
+                                    map(friends, (friend, index) => <Friend friend={friend} key={index} userName={userName}/>)
                                 }
                             </div>
                             <ScrollX />
@@ -59,23 +61,4 @@ class Left extends Component {
     }
 }
 
-Left.defaultProps = {
-    user: {
-        name: "blank",
-        avatar: require("../../../static/images/user.jpg"),
-    },
-    friends: [{
-        name: "崔玲",
-        lastTime: "14:09",
-        lastMsg: "流浪~木子阳:[收到一条网页版微信暂不支持的消息类型，请在手机上查看]",
-        avatar: require("../../../static/images/friend.jpg"),
-        noRemind: true
-    }, {
-        name: "崔玲",
-        lastTime: "15:09",
-        lastMsg: "下午好",
-        avatar: require("../../../static/images/friend.jpg")
-    }]
-};
-
-export default Left;
+export default connect(({ friends, user }) => ({ friends, user }))(Left);

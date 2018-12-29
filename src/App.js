@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Left, Right } from './components';
 import { connect } from 'react-redux';
-import socket from './redux/actions/socket';
 
 class App extends Component {
 
@@ -21,4 +20,4 @@ class App extends Component {
 }
 
 
-export default connect(null, socket)(App);
+export default connect(null, require("./redux/actions/socket").default)(App);

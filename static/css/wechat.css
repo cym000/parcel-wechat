@@ -502,3 +502,17 @@
     padding: 0 0 0 280px;
     box-sizing: border-box;
 }
+
+.chat_item.active {
+    background: #3a3f45;
+}
+
+.chat_item.active .ext, .chat_item.active .info .msg {
+    color: #fff;
+}
+
+.web_wechat_no-remind_hl {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -311px -432px;
+    background-size: 487px 462px;
+}
