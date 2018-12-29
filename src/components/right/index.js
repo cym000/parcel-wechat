@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import isEmpty from 'lodash/isEmpty';
 import map from 'lodash/map';
 import RightHead from './rightHead';
 import Empty from './empty';
@@ -20,8 +21,8 @@ class Right extends Component {
                     <div className="scroll-wrapper box_bd chat_bd scrollbar-dynamic" style={{ position: "absolute"}}>
                         <div className="box_bd chat_bd scrollbar-dynamic scroll-content" style={{marginBottom: 0, marginRight: 0, height: "544px"}}>
                             {
-                                false &&
-                                <Empty />
+                                (!sessionFriend.userName || isEmpty(messages))  &&
+                                <Empty sessionFriend={sessionFriend}/>
                             }
                             <div className="ng-scope">
                                 {

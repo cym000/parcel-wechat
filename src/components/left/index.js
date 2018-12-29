@@ -10,8 +10,7 @@ class Left extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedKey: "chat",
-            userName: "@123"
+            selectedKey: "chat"
         };
     }
 
@@ -22,7 +21,7 @@ class Left extends Component {
     render() {
 
         const { user, friends } = this.props;
-        const { selectedKey, userName } = this.state;
+        const { selectedKey } = this.state;
 
         return (
             <div className="panel give_me">
@@ -48,7 +47,7 @@ class Left extends Component {
                         <div className="chat_list scrollbar-dynamic scroll-content scroll-scrolly_visible" style={{ position: "relative" }}>
                             <div className="ng-scope">
                                 {
-                                    map(friends, (friend, index) => <Friend friend={friend} key={index} userName={userName}/>)
+                                    map(friends, (friend, index) => <Friend friend={friend} key={index}/>)
                                 }
                             </div>
                             <ScrollX />

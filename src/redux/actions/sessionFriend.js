@@ -21,8 +21,8 @@ export default {
 };
 
 export const handlers = {
-    [FETCH_SESSIONFRIEND]: (state, sessionFriend) => {
-        return sessionFriend;
+    [FETCH_SESSIONFRIEND]: (state, { payload }) => {
+        return payload;
     },
     [SET_SESSIONFRIEND]: (state, params) => {
         return {

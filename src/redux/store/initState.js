@@ -23,7 +23,7 @@ export default {
         noRemind: true
     }],
     sessionFriend: {},  // 会话好友
-    messages: [{
+    messages: {
         "@123": [{
             avatar: require("../../../static/images/user.jpg"),
             name: "blank",
@@ -146,5 +146,5 @@ export default {
             msgType: 1,
             content: "@所有人<br>狼杀报名表<br>时间：本周六 19：30 <br>地点：瑞景 乐萃咖啡<br>天气：降温注意保暖<br>板子：根据人数决定               <br>不到9人自动流局<br>法官：xx<br>1、平叔<br>2、22<br>3、Nash<br>4、<br>5、<br>6、6666<br>7、6667<br>8、海上霸主<br>9、Lin<br>10、lin+1<br>11、ling<br>12、鱼<br>13、<br><br>待定区<br>1、方志<br>2、凉白开<br>3、乌龟"
         }]
-    }]
+    }
 };

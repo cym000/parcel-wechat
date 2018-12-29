@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 class App extends Component {
 
     componentWillMount() {
-        const { fetchSocket } = this.props;
-        fetchSocket('ws://192.168.64.128:9501');
+        // const { fetchSocket } = this.props;
+        // fetchSocket('ws://192.168.64.128:9501');
     }
 
     render() {
