@@ -12,7 +12,7 @@ class Message extends Component {
                     <div style={{ overflow: "hidden"}}>
                         <div className={message.receiver === 0 ? "message ng-scope me" : "message ng-scope you"}>
                             {
-                                message.msgTime &&
+                                message.showTime &&
                                 <div className="message_system ng-scope">
                                     <div className="content ng-binding ng-scope">{message.msgTime}</div>
                                 </div>

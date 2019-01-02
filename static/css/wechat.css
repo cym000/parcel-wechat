@@ -272,6 +272,26 @@
     border-radius: 2px;
 }
 
+.chat_item .avatar .icon {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    color: #fff;
+    font-style: normal;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 16px;
+}
+
+.web_wechat_reddot_middle {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -451px -380px;
+    background-size: 487px 462px;
+}
+
 .chat_item .info {
     overflow: hidden;
 }

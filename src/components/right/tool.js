@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Face from '../face';
 import { connect } from 'react-redux';
+import moment from 'moment';
 
 class Tool extends Component {
 
@@ -30,11 +31,6 @@ class Tool extends Component {
 
     onShow = () => {
         this.setState({show: true});
-    }
-
-    onBlur = () => {
-        const dom = document.querySelector("#editArea");
-        console.log(this.getPosition(dom));
     }
 
     onChange = (params = {}) => {
@@ -120,8 +116,17 @@ class Tool extends Component {
     // }
 
     onSend = () => {
-        const { socketObj } = this.props;
-        socketObj.emit("test", { name: "blank" }, "who");
+        const dom = document.querySelector("#editArea");
+        const { addMessage, user, sessionFriend } = this.props;
+        const message = {
+            ...user,
+            receiver: 0,
+            msgType: 1,
+            content: dom.innerHTML,
+            msgTime: moment().format('HH:mm')
+        };
+        addMessage(sessionFriend, message);
+        dom.innerHTML = '';
     }
 
     render() {
@@ -145,7 +150,7 @@ class Tool extends Component {
                     }
                 </div>
                 <div className="content ng-isolate-scope">
-                    <pre id="editArea" onBlur={this.onBlur} className="flex edit_area ng-isolate-scope ng-pristine ng-valid" contentEditable/>
+                    <pre id="editArea" className="flex edit_area ng-isolate-scope ng-pristine ng-valid" contentEditable/>
                     <span className="caret_pos_helper" id="caretPosHelper"/>
                 </div>
                 <div className="action">
@@ -157,4 +162,4 @@ class Tool extends Component {
     }
 }
 
-export default connect(({ socketObj }) => ({ socketObj }))(Tool);
+export default connect(({ socketObj, sessionFriend, user }) => ({ socketObj, sessionFriend, user }), require('../../redux/actions/messages').default)(Tool);

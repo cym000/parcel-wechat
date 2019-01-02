@@ -28,6 +28,11 @@ class Friend extends Component {
                     </div>
                     <div className="avatar">
                         <img className="img" src={friend.avatar} alt=""/>
+                        {
+                            friend.dot && friend.dot > 0 &&
+                            <i className="icon web_wechat_reddot_middle ng-binding ng-scope">99</i>
+                        }
+
                     </div>
                     <div className="info">
                         <h3 className="nickname">

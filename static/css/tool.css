@@ -115,6 +115,7 @@
 
 a.btn {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn_send {
@@ -206,7 +207,7 @@ a.btn {
 .exp_bd {
     overflow: auto;
     background-color: #fff;
-    height: 232px;
+    height: 232px !important;
 }
 
 .exp_cont {
