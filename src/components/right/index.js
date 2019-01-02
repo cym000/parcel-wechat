@@ -12,21 +12,36 @@ class Right extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            height: 400
         };
     }
+
+    componentWillMount() {
+        window.onresize = () => {
+            const dom = document.getElementById("chatArea");
+            const height = dom.clientHeight - 51 - 181;
+            this.setState({ height });
+        };
+    }
+
+    componentDidMount() {
+        const dom = document.getElementById("chatArea");
+        const height = dom.clientHeight - 51 - 181;
+        this.setState({ height });
+    }
+
 
     render() {
 
         const { sessionFriend, messages } = this.props;
-        const { show } = this.state;
+        const { height } = this.state;
 
         return (
             <div className="rightArea">
                 <div id="chatArea" className="box chat ng-scope no-choose">
                     <RightHead friend={sessionFriend}/>
                     <div className="scroll-wrapper box_bd chat_bd scrollbar-dynamic" style={{ position: "absolute"}}>
-                        <div className="box_bd chat_bd scrollbar-dynamic scroll-content" style={{marginBottom: 0, marginRight: 0, height: "544px"}}>
+                        <div className="box_bd chat_bd scrollbar-dynamic scroll-content" style={{marginBottom: 0, marginRight: 0, height}}>
                             {
                                 (!sessionFriend.userName || isEmpty(messages))  &&
                                 <Empty sessionFriend={sessionFriend}/>

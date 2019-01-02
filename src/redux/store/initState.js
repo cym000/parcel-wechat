@@ -1,5 +1,3 @@
-import img from "../../../static/images/1.jpg";
-
 export default {
     collapsed: false,
     set: {
@@ -33,14 +31,8 @@ export default {
             name: "blank",
             receiver: 0,
             msgType: 1,
-            content: `<img class="msg-img" src="${img}">`,
-            msgTime: "17:20"
-        }, {
-            avatar: require("../../../static/images/user.jpg"),
-            name: "blank",
-            receiver: 0,
-            msgType: 1,
-            content: "你们发生什么事了"
+            content: "你们发生什么事了",
+            lastMsg: '17:01'
         }, {
             avatar: require("../../../static/images/lili.jpg"),
             name: "柯丽丽",
@@ -78,65 +70,11 @@ export default {
             msgType: 1,
             content: "我是菜猫"
         }, {
-            avatar: require("../../../static/images/xiaoming.jpg"),
-            name: "程蜀明",
-            receiver: 1,
-            msgType: 1,
-            content: "益鑫那个菜鸡"
-        }, {
-            avatar: require("../../../static/images/xiaoming.jpg"),
-            name: "程蜀明",
-            receiver: 1,
-            msgType: 1,
-            content: "我就喜欢林燕萍，尤其她那一双牙齿"
-        }, {
-            avatar: require("../../../static/images/xiaoming.jpg"),
-            name: "程蜀明",
-            receiver: 1,
-            msgType: 1,
-            content: "我要去强奸我表妹"
-        }, {
-            avatar: require("../../../static/images/jinzhou.jpg"),
-            name: "宋金洲",
-            receiver: 1,
-            msgType: 1,
-            content: "益鑫那个死变态"
-        }, {
-            avatar: require("../../../static/images/jinzhou.jpg"),
-            name: "宋金洲",
-            receiver: 1,
-            msgType: 1,
-            content: "我就是喜欢洪依萍，你能咋的"
-        }, {
-            avatar: require("../../../static/images/jinzhou.jpg"),
-            name: "宋金洲",
-            receiver: 1,
-            msgType: 1,
-            content: "我就是一个废物"
-        }, {
-            avatar: require("../../../static/images/yixin.jpg"),
-            name: "黄益鑫",
-            receiver: 1,
-            msgType: 1,
-            content: "同哥真帅"
-        }, {
-            avatar: require("../../../static/images/zhanghong.jpg"),
-            name: "林章鸿",
-            receiver: 1,
-            msgType: 1,
-            content: "金州这个傻逼，要不是看他可怜，我早就揍他了。"
-        }, {
             avatar: require("../../../static/images/tou.jpg"),
             name: "柯银森",
             receiver: 1,
             msgType: 1,
             content: "我是菜头"
-        }, {
-            avatar: require("../../../static/images/jinzhou.jpg"),
-            name: "宋金洲",
-            receiver: 1,
-            msgType: 1,
-            content: "我想请你吃大餐"
         }, {
             avatar: require("../../../static/images/jiaming.jpg"),
             name: "方佳明",
