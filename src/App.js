@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Left, Right } from './components';
 import { connect } from 'react-redux';
+import msg from '../static/audio/msg.mp3';
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
             <div className="main_inner">
                 <Left />
                 <Right />
+                <audio style={{ display: 'none' }} id="volume" preload="metadata" src={msg}/>
             </div>
         );
     }

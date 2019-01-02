@@ -22,8 +22,8 @@ class Left extends Component {
             const opt = document.querySelector(".opt");
             if (collapsed && dom && menu && !menu.contains(dom) && !opt.contains(dom)) {
                 collapsedHide();
-            }}
-        );
+            }
+        });
     }
 
     onChange = (params = {}) => {
@@ -31,7 +31,7 @@ class Left extends Component {
     }
 
     onShow = () => {
-        const { collapsed, collapsedToggle } = this.props;
+        const { collapsedToggle } = this.props;
         collapsedToggle();
     }
 
