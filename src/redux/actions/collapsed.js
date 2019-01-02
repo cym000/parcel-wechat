@@ -2,28 +2,28 @@ const COLLAPSED_TOGGLE = 'COLLAPSED_TOGGLE';
 const COLLAPSED_SHOW = 'COLLAPSED_SHOW';
 const COLLAPSED_HIDE = 'COLLAPSED_HIDE';
 
-const toggle = () => (dispatch) => {
+const collapsedToggle = () => (dispatch) => {
     return dispatch({
         type: COLLAPSED_TOGGLE
     });
 };
 
-const show = () => (dispatch) => {
+const collapsedShow = () => (dispatch) => {
     return dispatch({
         type: COLLAPSED_SHOW
     });
 };
 
-const hide = () => (dispatch) => {
+const collapsedHide = () => (dispatch) => {
     return dispatch({
         type: COLLAPSED_HIDE
     });
 };
 
 export default {
-    toggle,
-    show,
-    hide
+    collapsedToggle,
+    collapsedShow,
+    collapsedHide
 };
 
 export const handlers = {
@@ -31,6 +31,7 @@ export const handlers = {
         return !collapsed;
     },
     [COLLAPSED_SHOW]: (collapsed) => {
+        console.log(collapsed);
         return true;
     },
     [COLLAPSED_HIDE]: (collapsed) => {

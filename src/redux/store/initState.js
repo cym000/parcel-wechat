@@ -2,6 +2,10 @@ import img from "../../../static/images/1.jpg";
 
 export default {
     collapsed: false,
+    set: {
+        volume: 0,      // 未开启
+        notice: 0,      // 未开启通知
+    },
     socketObj: null,
     user: {              // 微信号
         name: "blank",

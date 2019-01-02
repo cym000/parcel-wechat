@@ -70,6 +70,7 @@
 .user .info .nickname .opt {
     display: inline-block;
     vertical-align: top;
+    cursor: pointer;
 }
 
 .web_wechat_add, .web_wechat_addfriend {
@@ -213,7 +214,7 @@
     margin: 0;
     max-height: none!important;
     max-width: none!important;
-    overflow: scroll!important;
+    overflow: auto!important;
     padding: 0;
     position: relative!important;
     top: 0;
@@ -405,94 +406,6 @@
     background-size: 487px 462px;
 }
 
-.scrollbar-dynamic>.scroll-element.scroll-x {
-    bottom: 2px;
-    height: 7px;
-    left: 0;
-    min-width: 100%;
-    width: 100%;
-}
-
-.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible {
-    display: block;
-    visibility: hidden;
-}
-
-.scrollbar-dynamic>.scroll-element, .scrollbar-dynamic>.scroll-element div {
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 10;
-}
-
-.scroll-element, .scroll-element div {
-    box-sizing: content-box;
-}
-
-.scroll-element {
-    display: none;
-}
-
-.scrollbar-dynamic>.scroll-element div {
-    display: block;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-.scroll-element .scroll-arrow, .scroll-element .scroll-bar {
-    cursor: default;
-}
-
-.scrollbar-dynamic>.scroll-element.scroll-x .scroll-element_outer {
-    bottom: 0;
-    top: auto;
-    left: 2px;
-    transition: height .2s;
-}
-
-.scrollbar-dynamic>.scroll-element .scroll-element_outer {
-    opacity: .3;
-    border-radius: 12px;
-}
-
-.scrollbar-dynamic>.scroll-element.scroll-x .scroll-element_size {
-    top: -4px;
-}
-
-.scrollbar-dynamic>.scroll-element.scroll-y .scroll-element_size {
-    left: -4px;
-}
-
-.scrollbar-dynamic>.scroll-element.scroll-y .scroll-bar {
-    left: auto;
-    min-height: 24px;
-    right: 0;
-    width: 7px;
-}
-
-.scrollbar-dynamic>.scroll-element .scroll-element_size {
-    background-color: #ccc;
-    opacity: 0;
-    border-radius: 12px;
-    transition: opacity .2s;
-}
-
-.scrollbar-dynamic>.scroll-element.scroll-x .scroll-bar {
-    bottom: 0;
-    height: 7px;
-    min-width: 24px;
-    top: auto;
-}
-
-.scrollbar-dynamic>.scroll-element .scroll-bar {
-    background-color: #6c6e71;
-    border-radius: 7px;
-}
-
 .rightArea {
     position: absolute;
     left: 0;
@@ -514,5 +427,88 @@
 .web_wechat_no-remind_hl {
     background: url("/static/images/package.png") no-repeat;
     background-position: -311px -432px;
+    background-size: 487px 462px;
+}
+
+.mmpop {
+    position: absolute;
+    background-color: #fff;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.system_menu {
+    width: 180px;
+    background: transparent!important;
+    z-index: 102!important;
+}
+
+.dropdown_menu {
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #d6d6d6;
+    box-shadow: 2px 3px 10px rgba(0,0,0,.1);
+    min-width: 125px;
+}
+
+.dropdown_menu li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    padding: 8px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown_menu li i {
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 34px;
+    height: 34px;
+}
+
+.menuicon_push_on {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -68px -398px;
+    background-size: 487px 462px;
+}
+
+.menuicon_push_off {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -34px -398px;
+    background-size: 487px 462px;
+}
+
+.menuicon_volume_on {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -170px -398px;
+    background-size: 487px 462px;
+}
+
+.menuicon_volume_mute {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -136px -398px;
+    background-size: 487px 462px;
+}
+
+.menuicon_feedback {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -306px -398px;
+    background-size: 487px 462px;
+}
+
+.dropdown_menu li.last_child a {
+    border-bottom: 0;
+}
+
+.menuicon_quit {
+    background: url("/static/images/package.png") no-repeat;
+    background-position: -102px -398px;
     background-size: 487px 462px;
 }

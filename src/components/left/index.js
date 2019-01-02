@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import map from 'lodash/map';
 import Tab from './tab';
 import Friend from './friend';
-import { ScrollX, ScrollY } from '../scroll';
+import Set from './set';
 
 class Left extends Component {
 
@@ -14,13 +14,30 @@ class Left extends Component {
         };
     }
 
+    componentWillMount() {
+        document.addEventListener("click", (e) => {
+            const dom = e.target;
+            const { collapsed, collapsedHide } = this.props;
+            const menu = document.querySelector("#mmpop_system_menu");
+            const opt = document.querySelector(".opt");
+            if (collapsed && dom && menu && !menu.contains(dom) && !opt.contains(dom)) {
+                collapsedHide();
+            }}
+        );
+    }
+
     onChange = (params = {}) => {
         this.setState(params);
     }
 
+    onShow = () => {
+        const { collapsed, collapsedToggle } = this.props;
+        collapsedToggle();
+    }
+
     render() {
 
-        const { user, friends } = this.props;
+        const { user, friends, collapsed } = this.props;
         const { selectedKey } = this.state;
 
         return (
@@ -33,7 +50,7 @@ class Left extends Component {
                         <div className="info">
                             <h3 className="nickname">
                                 <span className="display_name ng-binding">{user.name}</span>
-                                <a className="opt"><i className="web_wechat_add"/></a>
+                                <a className="opt" onClick={this.onShow}><i className="web_wechat_add"/></a>
                             </h3>
                         </div>
                     </div>
@@ -50,14 +67,15 @@ class Left extends Component {
                                     map(friends, (friend, index) => <Friend friend={friend} key={index}/>)
                                 }
                             </div>
-                            <ScrollX />
-                            <ScrollY />
                         </div>
                     }
                 </div>
+                {
+                    collapsed && <Set />
+                }
             </div>
         )
     }
 }
 
-export default connect(({ friends, user }) => ({ friends, user }))(Left);
+export default connect(({ friends, user, collapsed }) => ({ friends, user, collapsed }), require('../../redux/actions/collapsed').default)(Left);

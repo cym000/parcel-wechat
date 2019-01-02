@@ -6,13 +6,20 @@ import RightHead from './rightHead';
 import Empty from './empty';
 import Message from './message';
 import Tool from './tool';
-import { ScrollX, ScrollY } from '../scroll';
 
 class Right extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        };
+    }
 
     render() {
 
         const { sessionFriend, messages } = this.props;
+        const { show } = this.state;
 
         return (
             <div className="rightArea">
@@ -29,8 +36,6 @@ class Right extends Component {
                                     map(messages, (message, index) => <Message message={message} key={index}/>)
                                 }
                             </div>
-                            <ScrollX />
-                            <ScrollY />
                         </div>
                     </div>
                     <Tool />
