@@ -40,6 +40,16 @@ class Face extends Component {
         }
     }
 
+    onEmoji = (face) => {
+        const { callback } = this.props;
+        const { key, name, type } = face;
+        if (callback) {
+            let number = parseInt(key.substr(5));
+            let content = `<img class="${type === 'qq' ? 'qqemoji' : 'emoji'} emoji1f${number}" data-text="[${name}]_web" src="${space}"/>`;
+            callback(content);
+        }
+    }
+
     componentWillUnmount() {
         document.onclick = null;
     }
@@ -69,7 +79,7 @@ class Face extends Component {
                                     }
                                     {
                                         selectedKey === "emoji_face" &&
-                                        map(emojiFace, face =>  <a key={face.key} title={face.name} type={face.type} className={`face ${face.key}`}>{face.name}</a>)
+                                        map(emojiFace, face =>  <a key={face.key} title={face.name} type={face.type} className={`face ${face.key}`} onClick={() => this.onEmoji(face)}>{face.name}</a>)
                                     }
                                 </div>
                             </div>

@@ -30,6 +30,23 @@ class Right extends Component {
         this.setState({ height });
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.sessionFriend.userName === this.props.sessionFriend.userName) {
+            if (this.props.messages.length > prevProps.messages.length) {
+                const dom = document.querySelector('#chatArea .scroll-content');
+                const { scrollHeight, clientHeight } = dom;
+                dom.scrollTop = scrollHeight - clientHeight;
+            }
+        } else {
+            const dom = document.querySelector('#chatArea .scroll-content');
+            const { scrollHeight, clientHeight } = dom;
+            if (scrollHeight > clientHeight) {
+                dom.scrollTop = scrollHeight - clientHeight;
+            } else {
+                dom.scrollTop = 0;
+            }
+        }
+    }
 
     render() {
 

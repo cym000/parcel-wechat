@@ -118,15 +118,19 @@ class Tool extends Component {
     onSend = () => {
         const dom = document.querySelector("#editArea");
         const { addMessage, user, sessionFriend } = this.props;
-        const message = {
-            ...user,
-            receiver: 0,
-            msgType: 1,
-            content: dom.innerHTML,
-            msgTime: moment().format('HH:mm')
-        };
-        addMessage(sessionFriend, message);
-        dom.innerHTML = '';
+        if (sessionFriend.userName) {
+            const msg = {
+                ...user,
+                receiver: 0,
+                msgType: 1,
+                content: dom.innerHTML,
+                msgTime: moment().format('HH:mm')
+            };
+            addMessage(sessionFriend, msg);
+            dom.innerHTML = '';
+        } else {
+            alert('请选择联系人');
+        }
     }
 
     render() {
